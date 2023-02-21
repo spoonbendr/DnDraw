@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DnDraw</title>
+  <style>
+    body {
+      background-color: gray;
+      display: flex;
+      flex-direction: column;
+    }
+    canvas {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: calc(100% - 50px);
+		}
+    #tools-area {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+	<canvas id="border-canvas"></canvas>
+	<canvas id="canvas"></canvas>
+  <div id="tools-area">
+    <label for="txtBrushSize">Brush diameter: <input id="txtBrushSize" type="number" value=""> px</label>
+  </div>
+	<script src="script.js"></script>
+  
+</body>
+</html>
