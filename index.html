@@ -7,7 +7,7 @@
   <title>DnDraw</title>
   <style>
     body {
-      background-color: gray;
+      background-color: rgb(128, 128, 128);
       display: flex;
       flex-direction: column;
     }
@@ -26,13 +26,25 @@
       bottom: 0px;
       width: 100%;
     }
+    #tools-area > *{
+      margin-right: 20px;
+      border: 1px solid #fff;
+      padding: 3px;
+      border-radius: 3px;
+    }
+    #grid-canvas {
+      display: none;
+    }
   </style>
 </head>
 <body>
 	<canvas id="border-canvas"></canvas>
 	<canvas id="canvas"></canvas>
+	<canvas id="grid-canvas"></canvas>
   <div id="tools-area">
     <label for="txtBrushSize">Brush diameter: <input id="txtBrushSize" type="number" value=""> px</label>
+    <label for="txtGridSize">Grid size: <input id="txtGridSize" type="number" value="20"> px</label>
+    <label for="chkGrid">Show grid: <input id="chkGrid" type="checkbox"></label>
   </div>
 	<script src="script.js"></script>
   
